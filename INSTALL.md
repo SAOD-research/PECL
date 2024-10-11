@@ -1,5 +1,5 @@
 ## Installation
-
+Our proposed PECL framework installation follows ReDet
 ### Requirements
 
 - Linux
