@@ -1,5 +1,6 @@
 ## Installation
 Our proposed PECL framework installation follows ReDet
+```shell
 pip install -e .
 pip install -r requirements.txt
 apt-get update
@@ -8,6 +9,7 @@ sudo apt-get install swig
 cd DOTA_devkit
 swig -c++ -python polyiou.i
 python setup.py build_ext --inplace
+```
 
 ### Requirements
 
