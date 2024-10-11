@@ -5,73 +5,16 @@ For installation instructions, please see [INSTALL.md](INSTALL.md).
 
 
 ## Prepare DOTA dataset.
-It is recommended to symlink the dataset root to `ReDet/data`.
+It is recommended to symlink the dataset root to `PECL/dataset`.
 
-Here, we give an example for single scale data preparation of DOTA-v1.5.
-
-First, make sure your initial data are in the following structure.
+Split the original DOTA images and create COCO format json. 
 ```
-data/dota15
-├── train
-│   ├──images
-│   └──labelTxt
-├── val
-│   ├──images
-│   └──labelTxt
-└── test
-    └──images
+python DOTA_devkit/prepare_dota1.py --srcpath path_to_dota --dstpath path_to_split_1024 (modify path, modify missing rate)
+sudo apt update
+sudo apt install libgl1-mesa-glx
+apt-get update
+apt-get install libglib2.0-dev
 ```
-Split the original images and create COCO format json. 
-```
-python DOTA_devkit/prepare_dota1_5.py --srcpath path_to_dota --dstpath path_to_split_1024
-```
-Then you will get data in the following structure
-```
-dota15_1024
-├── test1024
-│   ├──DOTA_test1024.json
-│   └──images
-└── trainval1024
-     ├──DOTA_trainval1024.json
-     └──images
-```
-For data preparation with data augmentation, refer to "DOTA_devkit/prepare_dota1_5_v2.py"
-
-
-## Prepare HRSC2016 dataset.
-
-First, make sure your initial data are in the following structure.
-
-```
-data/HRSC2016
-├── Train
-│   ├──AllImages
-│   └──Annotations
-└── Test
-│   ├──AllImages
-│   └──Annotations
-```
-
-Then you need to convert HRSC2016 to DOTA's format, i.e., 
-rename `AllImages` to `images`, convert xml `Annotations` to DOTA's `txt` format.
-Here we provide a script from s2anet: [HRSC2DOTA.py](https://github.com/csuhan/s2anet/blob/original_version/DOTA_devkit/HRSC2DOTA.py). Now, your `data/HRSC2016` should contain the following folders.
-
-```
-data/HRSC2016
-├── Train
-│   ├──images
-│   └── labelTxt
-└── Test
-    └── images
-```
-
-Then we need to generate `json` labels with COCO's format.
- 
-```
-python DOTA_devkit/HRSC20162COCO.py
-```
-
-
 ## Inference with pretrained models
 
 
