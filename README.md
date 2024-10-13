@@ -35,7 +35,7 @@ Please see [GETTING_STARTED.md](GETTING_STARTED.md) for the basic usage.
 
 
 ## Citation
-
+<!--
 ```BibTeX
 @InProceedings{han2021ReDet,
     author    = {Han, Jiaming and Ding, Jian and Xue, Nan and Xia, Gui-Song},
@@ -46,3 +46,4 @@ Please see [GETTING_STARTED.md](GETTING_STARTED.md) for the basic usage.
     pages     = {2786-2795}
 }
 ```
+--> 
