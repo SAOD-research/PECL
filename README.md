@@ -43,7 +43,7 @@ Here, we give an example for single scale data preparation of sparse annotation 
 
 First, make sure your initial data are in the following structure.
 
-'''data/dota15
+```data/dota15
 ├── train
 │   ├── images
 │   └── labelTxt
@@ -51,7 +51,7 @@ First, make sure your initial data are in the following structure.
 │   ├── images
 │   └── labelTxt
 └── test
-    └── images'''
+    └── images```
     
 Split the original images and create COCO format json **with different label rates**.
 
