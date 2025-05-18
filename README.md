@@ -43,7 +43,8 @@ Here, we give an example for single scale data preparation of sparse annotation 
 
 First, make sure your initial data are in the following structure.
 
-```data/dota15
+```
+data/dota15
 ├── train
 │   ├── images
 │   └── labelTxt
@@ -51,7 +52,8 @@ First, make sure your initial data are in the following structure.
 │   ├── images
 │   └── labelTxt
 └── test
-    └── images```
+    └── images
+```
     
 Split the original images and create COCO format json **with different label rates**.
 
@@ -59,13 +61,15 @@ Split the original images and create COCO format json **with different label rat
 
 Then you will get data in the following structure
 
-`dota15_1024
+```
+dota15_1024
 ├── test1024
 │   ├──DOTA_test1024.json
 │   └──images
 └── trainval1024
      ├──DOTA_trainval1024.json
-     └──images`
+     └──images
+```
 
 
 The sparse annotation dataset can be downloaded from the following URL:
@@ -85,7 +89,7 @@ Please see [GETTING_STARTED.md](GETTING_STARTED.md) for the basic usage.
 
 ## Citation
 <!--
-```BibTeX
+BibTeX
 @InProceedings{han2021ReDet,
     author    = {Han, Jiaming and Ding, Jian and Xue, Nan and Xia, Gui-Song},
     title     = {ReDet: A Rotation-equivariant Detector for Aerial Object Detection},
@@ -94,5 +98,4 @@ Please see [GETTING_STARTED.md](GETTING_STARTED.md) for the basic usage.
     year      = {2021},
     pages     = {2786-2795}
 }
-```
 --> 
