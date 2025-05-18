@@ -51,7 +51,8 @@ First, make sure your initial data are in the following structure.
 │   ├── images
 │   └── labelTxt
 └── test
-    └── images```
+    └── images
+```
     
 Split the original images and create COCO format json **with different label rates**.
 
@@ -68,7 +69,8 @@ Then you will get data in the following structure
      ├──DOTA_trainval1024_0.02.json
      ├──DOTA_trainval1024_0.05.json
      ├──DOTA_trainval1024_0.1.json
-     └──images```
+     └──images
+```
 
 The sparse annotation dataset can be downloaded from the following URL:
 
