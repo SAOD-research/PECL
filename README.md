@@ -1,4 +1,4 @@
-### Progressive Exploration-Conformal Learning for Sparsely Annotated Object Detection in Aerial Images
+ ### Progressive Exploration-Conformal Learning for Sparsely Annotated Object Detection in Aerial Images
 
 **[Progressive Exploration-Conformal Learning for Sparsely Annotated Object Detection in Aerial Images(NeurIPS 2024)](https://openreview.net/pdf?id=Jzog9gvOf6)**          
 
@@ -35,14 +35,36 @@ You can follow the instructions here: [ReDet GitHub](https://github.com/csuhan/R
 The main difference between the baseline method in this paper and the official ReDet lies in the construction of the sparse annotation dataset, which will be explained in detail below.  
 Therefore, you should first run the ReDet code successfully. Then, change the data path in `config/ReDet/ReDet_re50_refpn_1x_dota1.py` to the path of the sparse annotation dataset. This way, you can obtain the corresponding baseline results.
 
-### How to obtain the sparse annotation dataset
+### Prepare sparse annotation DOTA dataset
+It is recommended to symlink the dataset root to ReDet/data.
 
-The sparse annotation dataset can be downloaded from the following URL:
+Here, we give an example for single scale data preparation of DOTA-v1.5.
 
+First, make sure your initial data are in the following structure.
 
+`data/dota15
+├── train
+│   ├──images
+│   └──labelTxt
+├── val
+│   ├──images
+│   └──labelTxt
+└── test
+    └──images`
+Split the original images and create COCO format json.
 
+python DOTA_devkit/prepare_dota1_5.py --srcpath path_to_dota --dstpath path_to_split_1024
+Then you will get data in the following structure
 
-### How to obtain the sparse annotation dataset
+`dota15_1024
+├── test1024
+│   ├──DOTA_test1024.json
+│   └──images
+└── trainval1024
+     ├──DOTA_trainval1024.json
+     └──images`
+For data preparation with data augmentation, refer to "DOTA_devkit/prepare_dota1_5_v2.py"
+
 
 The sparse annotation dataset can be downloaded from the following URL:
 
