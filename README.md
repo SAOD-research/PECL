@@ -32,12 +32,20 @@ All experiments in this paper are based on the **mmdetection/mmrotate** framewor
 Taking **ReDet** as an example, the installation, training, and testing steps can be found in the official ReDet documentation, which is clear and well-documented.  
 You can follow the instructions here: [ReDet GitHub](https://github.com/csuhan/ReDet).
 
-The only difference lies in the construction of the sparse annotation dataset, which will be explained in detail below.  
-So, first, make sure to run the ReDet code successfully. Then, change the data path in `config/ReDet/ReDet_re50_refpn_1x_dota1.py` to the path of the sparse annotation dataset. This way, you can obtain the corresponding baseline results.
+The main difference between the baseline method in this paper and the official ReDet lies in the construction of the sparse annotation dataset, which will be explained in detail below.  
+Therefore, you should first run the ReDet code successfully. Then, change the data path in `config/ReDet/ReDet_re50_refpn_1x_dota1.py` to the path of the sparse annotation dataset. This way, you can obtain the corresponding baseline results.
 
 ### How to obtain the sparse annotation dataset
 
 The sparse annotation dataset can be downloaded from the following URL:
+
+
+
+
+### How to obtain the sparse annotation dataset
+
+The sparse annotation dataset can be downloaded from the following URL:
+
 
 
 
