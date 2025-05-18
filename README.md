@@ -72,8 +72,8 @@ Then you will get data in the following structure
      └──images
 ```
 
-The sparse annotation dataset can be downloaded from the following URL:
-
+The sparse annotation dataset can be downloaded from the following URL:  
+[链接](https://pan.quark.cn/s/8f55ae0f1985)
 
 
 
