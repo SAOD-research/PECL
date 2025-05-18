@@ -57,6 +57,7 @@ First, make sure your initial data are in the following structure.
 Split the original images and create COCO format json **with different label rates**.
 
 `python DOTA_devkit/prepare_dota1.py --srcpath path_to_dota --dstpath path_to_split_1024`
+`python DOTA_devkit/cut.py --srcpath path_to_dota --dstpath path_to_split_1024 --ratio label rates`
 
 Then you will get data in the following structure
 
@@ -73,8 +74,7 @@ Then you will get data in the following structure
 ```
 
 The sparse annotation dataset can be downloaded from the following URL:  
-[链接](https://pan.quark.cn/s/8f55ae0f1985)
-
+[Link](https://pan.quark.cn/s/8f55ae0f1985)
 
 
 ## Installation
