@@ -43,8 +43,7 @@ Here, we give an example for single scale data preparation of sparse annotation 
 
 First, make sure your initial data are in the following structure.
 
-```
-data/dota15
+```data/dota
 ├── train
 │   ├── images
 │   └── labelTxt
@@ -52,25 +51,24 @@ data/dota15
 │   ├── images
 │   └── labelTxt
 └── test
-    └── images
-```
+    └── images```
     
 Split the original images and create COCO format json **with different label rates**.
 
-`python DOTA_devkit/prepare_dota1_5.py --srcpath path_to_dota --dstpath path_to_split_1024`
+`python DOTA_devkit/prepare_dota1.py --srcpath path_to_dota --dstpath path_to_split_1024`
 
 Then you will get data in the following structure
 
-```
-dota15_1024
+```dota_1024
 ├── test1024
 │   ├──DOTA_test1024.json
 │   └──images
 └── trainval1024
-     ├──DOTA_trainval1024.json
-     └──images
-```
-
+     ├──DOTA_trainval1024_0.01.json
+     ├──DOTA_trainval1024_0.02.json
+     ├──DOTA_trainval1024_0.05.json
+     ├──DOTA_trainval1024_0.1.json
+     └──images```
 
 The sparse annotation dataset can be downloaded from the following URL:
 
