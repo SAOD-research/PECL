@@ -24,6 +24,23 @@ Comprehensive evaluations on two public datasets demonstrate the superiority of 
 |ReDet                      |DOTA-v1.5       |    ReR50-ReFPN     |   ✓    |   ✓    |   1x     |  76.80 |    [cfg](configs/ReDet/ReDet_re50_refpn_1x_dota15_ms.py) [model](https://drive.google.com/file/d/1I1IDmt3juw1sm-CT-zaosVVDldAHYBIO/view?usp=sharing) [log](https://drive.google.com/file/d/1T2Eou26T0mpmP93X_XrFk-AhSicLrgGp/view?usp=sharing)        |
 |ReDet                      |HRSC2016        |    ReR50-ReFPN     |   -    |   -    |   3x     |  90.46 |    [cfg](configs/ReDet/ReDet_re50_refpn_3x_hrsc2016.py) [model](https://drive.google.com/file/d/1vTU6OeFD6CX4zkQn7szlgL7Qc_MOZpgC/view?usp=sharing) [log](https://drive.google.com/file/d/1csbm3jop9MGOQt8JaEeBg6TEXOZXY-yo/view?usp=sharing)        |
 --> 
+
+
+## Guideline
+All experiments in this paper are based on the **mmdetection/mmrotate** framework, depending on the framework used by the baseline method.
+
+Taking **ReDet** as an example, the installation, training, and testing steps can be found in the official ReDet documentation, which is clear and well-documented.  
+You can follow the instructions here: [ReDet GitHub](https://github.com/csuhan/ReDet).
+
+The only difference lies in the construction of the sparse annotation dataset, which will be explained in detail below.  
+So, first, make sure to run the ReDet code successfully. Then, change the data path in `config/ReDet/ReDet_re50_refpn_1x_dota1.py` to the path of the sparse annotation dataset. This way, you can obtain the corresponding baseline results.
+
+### How to obtain the sparse annotation dataset
+
+The sparse annotation dataset can be downloaded from the following URL:
+
+
+
 ## Installation
 
 Please refer to [INSTALL.md](INSTALL.md) for installation and dataset preparation.
